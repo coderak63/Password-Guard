@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="General">
+
+
+        <ListPreference
+            android:defaultValue="0"
+            android:dialogTitle="Sort"
+            android:entries="@array/sort_list"
+            android:entryValues="@array/sort_list_values"
+            android:key="@string/key_sort"
+            android:title="Sort"
+            android:summary="%s"/>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="CSV">
+
+        <Preference
+            android:key="@string/key_import_csv"
+            android:summary="Import data from a non-encrypted csv file"
+            android:title="Import CSV file" />
+
+        <Preference
+            android:key="@string/key_export_csv"
+            android:summary="Export data to a non-encrypted csv file"
+            android:title="Export CSV file" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="Security">
+
+        <Preference
+            android:key="@string/key_change_passcode"
+            android:title="Change Passcode" />
+
+        <SwitchPreference
+            android:defaultValue="false"
+            android:key="@string/key_use_fingerprint"
+            android:summary="Use fingerprint instead of passcode"
+            android:title="Use Fingerprint" />
+
+        <SwitchPreference
+            android:defaultValue="false"
+            android:key="@string/key_auto_exit"
+            android:summary="When the screen turns off"
+            android:title="Auto exit" />
+
+        <SwitchPreference
+            android:defaultValue="true"
+            android:key="@string/key_allow_screenshot"
+            android:summary="Apply after app restarts"
+            android:title="Allow Screenshots" />
+
+        <SwitchPreference
+            android:defaultValue="false"
+            android:key="@string/key_self_destruct"
+            android:summary="Delete all data after 5 incorrect passcode attempts"
+            android:title="Self Destruct" />
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/pref_header_about">
+
+        <Preference
+            android:selectable="false"
+            android:summary="@string/summary_about" />
+
+        <Preference
+            android:summary="@string/app_version"
+            android:title="@string/title_version" />
+
+        <Preference
+            android:key="@string/key_send_feedback"
+            android:summary="@string/summary_support"
+            android:title="@string/title_send_feedback" />
+
+        <Preference
+            android:key="@string/key_about_app"
+            android:title="About App" />
+
+        <!-- preference opens url in browser -->
+
+<!--
+        <Preference android:title="@string/title_terms">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="@string/url_terms" />
+        </Preference>
+        -->
+    </PreferenceCategory>
+</PreferenceScreen>
